@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home/index.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="" />
+      </div>
+      <div>
+        <nav class="header-menu">
+          <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Portfolio</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start banner -->
+    <section class="banner">
+      <div class="banner-container">
+        <h3 class="banner-heading">Online solutions</h3>
+        <h4 class="banner-small-heading">to boost your website</h4>
+        <p class="banner-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          <br />
+          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </p>
+        <div class="banner-button-container">
+          <button class="btn btn-services">Our services</button>
+          <button class="btn btn-learn-more">Learn more</button>
+        </div>
+      </div>
+      <div class="banner-bottom">
+        <div class="banner-bottom-left">
+          <div>
+            <img src="./assets/images/banner-icon-left.png" alt="" />
+          </div>
+          <div>
+            <p class="bottom-left-content">Have questions?</p>
+            <p class="bottom-left-number">+32 540 200 7575</p>
+          </div>
+        </div>
+        <div class="banner-bottom-right">
+          <p>Visit our Social Media</p>
+          <a href="">FB</a>
+          <a href="">IN</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <span class="count">71441670</span>
+      <span class="count">2130735</span>
+      <span class="count">4523383</span>
+      <span class="up">9332313</span>
+    </div>
+    <!-- end banner -->
+
+    <!-- start offer section -->
+    <section></section>
+    <!-- end offer section -->
+
+    <!-- start services section -->
+    <section></section>
+    <!-- end services section -->
+
+    <!-- email section -->
+    <section></section>
+    <!-- end email section -->
+
+    <!-- start footer -->
+    <section></section>
+    <!-- end footer -->
+
+    <script>
+      // Add .format() method to Number prototype
+      Number.prototype.format = function (n) {
+        var r = new RegExp(
+          "\\d(?=(\\d{3})+" + (n > 0 ? "\\." : "$") + ")",
+          "g"
+        );
+        return this.toFixed(Math.max(0, Math.floor(n))).replace(r, "$&,");
+      };
+
+      // Animate number count up
+      document.querySelectorAll(".up").forEach(function (el) {
+        const target = parseFloat(el.textContent.replace(/,/g, "")) || 0;
+        const duration = 10000;
+        const start = performance.now();
+
+        function easeOutExpo(t) {
+          return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+        }
+
+        function animate(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutExpo(progress);
+          const current = target * eased;
+
+          el.textContent = current.format(0);
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        // Start from 0
+        el.textContent = "0";
+        requestAnimationFrame(animate);
+      });
+    </script>
+  </body>
+</html>

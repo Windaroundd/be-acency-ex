@@ -1,0 +1,138 @@
+/* reset css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 15px 40px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* start header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .header-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  color: #0c117b;
+}
+.header-menu ul li:hover {
+  color: #333bd5;
+  cursor: pointer;
+}
+
+/* end header */
+
+/* start banner */
+.banner {
+  /* display: flex; */
+  /* justify-content: center; */
+  margin: 50px 0;
+  height: 500px;
+  /* cách set hình ảnh nền - background -image */
+  background-image: url("../../assets/images/home-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner .banner-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.banner .banner-heading {
+  color: rgb(73, 137, 253);
+  font-size: 45px;
+}
+
+.banner .banner-small-heading {
+  color: rgb(12, 17, 123);
+  font-size: 45px;
+}
+.banner .banner-content {
+  color: rgb(173, 173, 193);
+  font-size: 15px;
+  margin: 30px 0;
+}
+
+.banner .btn-services {
+  background-color: rgb(247, 67, 113);
+  color: white;
+}
+.banner .btn-learn-more {
+  border: 1px solid rgb(12, 17, 123);
+  color: rgb(12, 17, 123);
+  transition: all 0.3s ease;
+}
+.banner .btn-learn-more:hover {
+  background: rgb(12, 17, 123);
+  color: white;
+}
+
+.banner .banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.banner .banner-bottom-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner .bottom-left-content {
+  color: rgb(173, 173, 193);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.banner .bottom-left-number {
+  color: rgb(73, 137, 253);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.banner .banner-bottom-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner .banner-bottom-right a {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(73, 137, 253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* khoang cach => spacing */
+
+/* end banner */
