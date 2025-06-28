@@ -1,0 +1,16 @@
+/* desktop first */
+@media screen and (max-width: 1200px) {
+  .header {
+    background-color: green;
+  }
+  .header nav,
+  .header button {
+    display: none;
+  }
+  .header .logo {
+    width: 150px;
+  }
+  .header .mobile-menu {
+    display: block;
+  }
+}
